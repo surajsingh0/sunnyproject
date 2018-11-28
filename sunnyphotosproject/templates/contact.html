@@ -1,0 +1,108 @@
+{% extends "layout.html" %}
+{% block title %}Contact us{% endblock %}
+
+{% block custom %}
+    <style type="text/css">
+
+    body{
+	width:100%;
+	height:100%;
+	
+}
+
+
+.h2h {
+	margin:0 0 35px 0;
+	font-family: 'Patua One', cursive;
+	text-transform: uppercase;
+	letter-spacing:1px;
+}
+
+.sp{
+	margin:0 0 25px;
+	font-size:18px;
+	line-height:1.6em;
+}
+a{
+	color:#26a5d3;
+}
+a:hover,a:focus{
+	text-decoration:none;
+	color:#26a5d3;
+}
+
+#contact{
+	background: #333;
+	color:#f4f4f4;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
+textarea.form-control{
+    height:100px;
+}
+
+.hr {
+  height: 2px;
+  background-color: black;
+  box-shadow: 1px 1px 10px white;
+}
+</style>
+
+    <script type="text/javascript">
+        window.alert = function(){};
+        var defaultCSS = document.getElementById('bootstrap-css');
+        function changeCSS(css){
+            if(css) $('head > link').filter(':first').replaceWith('<link rel="stylesheet" href="'+ css +'" type="text/css" />'); 
+            else $('head > link').filter(':first').replaceWith(defaultCSS); 
+        }
+        $( document ).ready(function() {
+          var iframe_height = parseInt($('html').height()); 
+          window.parent.postMessage( iframe_height, 'https://bootsnipp.com');
+        });
+    </script>
+    
+    <link href="https://fonts.googleapis.com/css?family=Oswald:700|Patua+One|Roboto+Condensed:700" rel="stylesheet">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+{% endblock %}
+{% block main %}
+<section id="contact" class="content-section text-center">
+  <div class="hr"></div>
+
+        <div class="contact-section">
+            <div class="container" style="margin-top: 20px">
+              <h2 class="h2h">Contact Us</h2>
+              <p class="sp">Feel free to shout us by feeling the contact form or visiting our social network sites like Fackebook,Whatsapp,Twitter.</p>
+              <div class="row">
+                <div class="col-md-12 col-md-offset-2">
+                  <form class="form-horizontal" action="/do_contact" method="POST">
+                    <div class="form-group">
+                      <label for="exampleInputName2">Name</label>
+                      <input type="text" class="form-control" name="name" id="exampleInputName2" placeholder="Jane Doe">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputEmail2">Email</label>
+                      <input type="email" class="form-control" name="email" id="exampleInputEmail2" placeholder="jane.doe@example.com">
+                    </div>
+                    <div class="form-group ">
+                      <label for="exampleInputText">Your Message</label>
+                     <textarea  class="form-control" name="message" placeholder="Description"></textarea> 
+                    </div>
+                    <button type="submit" class="btn btn-default">Send Message</button>
+                  </form>
+
+                  <hr>
+                    <h3>Our Social Sites</h3>
+                  <ul class="list-inline banner-social-buttons">
+                    <li><a href="#" class="btn btn-default btn-lg"><i class="fa fa-twitter"> <span class="network-name">Twitter</span></i></a></li>
+                    <li><a href="#" class="btn btn-default btn-lg"><i class="fa fa-facebook"> <span class="network-name">Facebook</span></i></a></li>
+                    <li><a href="#" class="btn btn-default btn-lg"><i class="fa fa-youtube-play"> <span class="network-name">Youtube</span></i></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="hr"></div>
+      </section>
+      
+      {% endblock %}

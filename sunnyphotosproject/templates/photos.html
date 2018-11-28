@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block title %}Photos{% endblock %}
+
+{% block main %}
+<div class="error">{{ err }}</div>
+<div class="container">
+    {% for img, time in img_list__time_list %}
+    <img src="static/upload_img/{{img}}" width="275" height="200">
+    <p>{{time}}</p>
+    {% endfor %}
+</div>
+{% endblock %}

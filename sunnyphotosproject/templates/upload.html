@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+{% block title %}Upload{% endblock %}
+
+{% block main %}
+    <form class="upload_box" action="/uploader" method="POST" enctype="multipart/form-data">
+	   <input type="file" name="file" accept="image/*">
+	   Enter image name: <input type="text" name="img_name">
+       <input type="submit">
+    </form>
+{% endblock %}

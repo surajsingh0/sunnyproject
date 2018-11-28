@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% block title %}Home{% endblock %}
+
+{% block custom %}
+<style>
+  #main {
+    margin-top: auto; margin-bottom: auto;
+    background-color: skyblue; padding: 20px;
+    height: 550px;
+  }
+  .content {
+    margin-top: 150px;
+  }
+</style>
+{% endblock %}
+
+{% block main %}
+
+  <div id="main">
+    <div class="content">
+      <h1 class="cover-heading">Upload Your Photos</h1>
+      <p class="lead">SunnyPhotos is a Website which provides users to upload thier photos publicly.</p>
+      <p class="lead">
+        <a href="/login" class="btn btn-lg btn-secondary">Upload Your Photos</a>
+      </p>
+    </div>
+  </div>
+
+{% endblock %}
